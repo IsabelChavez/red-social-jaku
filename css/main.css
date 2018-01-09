@@ -1,0 +1,30 @@
+*{
+    font-family: 'Raleway', sans-serif;
+}
+.vh100{
+	height: 100vh;
+}
+.background{
+    background:linear-gradient(rgba(0, 0, 0, 0.9), rgba(0,0,0,.5)), url(../assets/images/run.jpg) no-repeat center center;
+    background-size: cover;
+    max-width:100%;
+}
+.container-flex-column {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.register{
+    color: #000;
+    background: #f6f6f6;
+}
+.signup{
+    background:linear-gradient(rgba(0, 0, 0, 0.714), rgba(0,0,0,.5)), url(../assets/images/foto-signup.png) no-repeat center center;
+    background-size: cover;
+    max-width:100%;
+    padding: 2em;
+    color: #fff;
+}
+.signup .btn {
+    font-weight:700;
+}

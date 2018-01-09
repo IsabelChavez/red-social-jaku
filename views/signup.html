@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../vendors/materialize/css/materialize.min.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <title>Jaku</title>
+</head>
+<body class="signup vh100">
+  <div class=row>
+    <div class="center-align offset-s2 col s8 offset-s2  ">
+      <figure>
+        <img class="responsive-img" src="../assets/images/logo.png" alt="">
+      </figure>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field offset-s1 col s10 offset-s1  offset-l3 col l6 offset-l3">
+      <i class="material-icons prefix">email</i>
+      <input id="email2" type="email" class="validate">
+      <label for="icon_prefix">Email</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field offset-s1 col s10 offset-s1 offset-l3 col l6 offset-l3 ">
+      <i class="material-icons prefix">lock</i>
+      <input id="password2" type="password" class="validate">
+      <label for="icon_prefix">Password</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s6 offset-l3 l3 center-align">
+      <button class="waves-effect waves-light btn cyan accent-2" id="login">Acceder</button>
+    </div>
+    <div class="col s6  l3 center-align">
+      <button class="waves-effect waves-light btn cyan accent-2 modal-trigger" href="#modal1">Únete</button>
+    </div>
+  </div>
+  <div class="row center-align">
+    <div class=" offset-l4 col l4 offset-l4  col s12 ">
+      <button id="btnGoogle" class="waves-effect waves-light btn  red darken-2">
+        <i class="fa fa-google" aria-hidden="true"></i> Ingresar con Google</button>
+    </div>
+  </div>
+  <div id="modal1" class="modal register">
+    <div class="modal-content">
+      <div class="row">
+        <div class="col s12 center align">
+          <h4>Empieza ahora</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field offset-s1 col s10 offset-s1">
+          <i class="material-icons prefix">email</i>
+          <input id="email" type="email" class="validate">
+          <label for="icon_prefix">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field offset-s1 col s10 offset-s1">
+          <i class="material-icons prefix">lock</i>
+          <input id="password" type="password" class="validate">
+          <label for="icon_prefix">Password</label>
+        </div>
+      </div>
+      <div class="row center-align">
+        <div class="offset-s1 col s10 offset-s1">
+          <button id="register" class="modal-action modal-close waves-effect waves-green btn cyan accent-2">Enviar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../vendors/jquery/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAsWlB0dmOzld3qIJyJgBztHJNq-ef_1_U",
+      authDomain: "red-social-d49cb.firebaseapp.com",
+      databaseURL: "https://red-social-d49cb.firebaseio.com",
+      projectId: "red-social-d49cb",
+      storageBucket: "red-social-d49cb.appspot.com",
+      messagingSenderId: "270231005297"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="../vendors/materialize/js/materialize.min.js"></script>
+  <script type="text/javascript" src="../js/signup.js"></script>
+</body>
+</html>
