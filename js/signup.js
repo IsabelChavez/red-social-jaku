@@ -45,6 +45,8 @@ $(document).ready(function() {
         var isAnonymous = user.isAnonymous;
         var uid = user.uid;
         var providerData = user.providerData;
+        $('.perfil').attr('src', photoURL);
+        $('#profileName').text(displayName);
         // ...
       } else {
         // User is signed out.
@@ -72,14 +74,14 @@ $(document).ready(function() {
       email: user.email,
       photo: user.photoURL,
     };
-    firebase.database().ref('Jaku').push(usuario);
+    firebase.database().ref('jaku').push(usuario);
   }
   var provider = new firebase.auth.GoogleAuthProvider();
   $('#btnGoogle').on('click', function() {
     firebase.auth().signInWithPopup(provider)
       .then(function(result) {
-        $(location).attr('href', 'view-3.html');
         saveUser(result.user);
+        $(location).attr('href', 'view-3.html');
       }).catch(function(error) {
         var errorCode = error.code;
         var errorMessage = error.message;
