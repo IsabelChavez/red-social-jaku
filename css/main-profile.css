@@ -1,0 +1,56 @@
+html {
+    font-family: 'Raleway', sans-serif;
+}
+
+div[id^='view'] {
+    padding-top: 4rem;
+}
+
+/* estilos de header y menu */
+
+.navbar{
+    background : #28ebcf;
+}
+
+.navbar div a img{
+    padding-top: 0.7rem;
+}
+
+/* estilos para la primera vista */
+
+.perfil{
+    margin-top: 2rem;
+}
+
+.buttons{
+    margin-top: 1rem;
+    background: #28ebcf;
+}
+
+.buttons a i{
+    background: #28ebcf;
+}
+.buttons button{
+    padding: 0;
+    font-size: 0.8rem;
+    background : #28ebcf;   
+}
+
+.post{
+    padding: 0 1.5rem;
+}
+
+textarea{
+    height: 5rem;
+}
+
+.camera a i{
+    height: 3rem;   
+}
+
+.camera a {
+    width: 3rem;
+}
+/* estilos de la segunda vista */
+/* sugerencias */
+

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jaku</title>
+  <!-- CSS  -->
+  <meta charset="utf-8">
+  <title>Lyft Page 1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="icon" href="../assets/icons/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="../vendors/Materialize/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main-profile.css">
+</head>
+<body>
+  <!-- NAVBAR, LOGOS Y VISTAS -->
+<div class="navbar-fixed">
+  <nav class="nav-extended navbar">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo center"><img class="responsive-img" width="70" src="../assets/icons/jaku.png" alt="jaku"></a>
+      </div> 
+      <div class="nav-content menu-icons">
+            <ul class="tabs tabs-transparent" id="mobile-demo">
+                <li class="tab"><a class="active" href="#view1"><i class="material-icons">home</i></a></li>
+                <li class="tab"><a href="#view2"><i class="material-icons">person_add</i></a></li>
+                <li class="tab"><a href="#view3"><i class="material-icons">face</i></a></li>
+            </ul>
+      </div>
+  </nav>
+  </div>
+  <!-- PRIMERA VISTA - PUBLICACIONES -->
+  <div id="view1" class="col s12 view1 post">
+  <!-- foto de perfil - escribir un estado -->
+  <div class="container">
+      <div class="row">
+  <div class="col s3 m2">
+          <a href="#"><img class="responsive-img circle perfil" src="../assets/images/foto1.jpg" alt="usuario"></a>
+          <h5 class="center">Oprah</h5>
+  </div>
+  <div class="col s9 m10">
+          <h5>¿Qué planes para hoy?</h5>
+          <textarea name="textarea" rows="10" cols="50" placeholder='Comentanos aquí'></textarea>
+          <!-- boton subir fotos y submit -->
+          <div class="buttons">
+      <div class="file-field input-field camera">
+              <a class="btn btn-floating"><i class="large material-icons" ><input type="file">add_a_photo</i></a>
+      </div>
+      <button class="btn waves-effect waves-light right" type="submit" name="action">Publicar
+              <i class="material-icons right"></i>
+      </button>
+          </div>
+  </div>
+      </div>
+  </div>
+  <!-- lugar donde se publican los post -->
+  <div class="container">
+      <div class="row">
+  <div class="col s12 m12">
+          <p><b>Nombre del usuario amigo</b></p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum doloremque voluptatum aliquid atque totam aperiam numquam blanditiis nam, quaerat adipisci vitae ducimus cumque consequuntur, quidem natus possimus repudiandae corrupti quia.</p>
+          <div class="center">
+      <img src="../assets/images/atardecer.png" alt="" class="responsive-img">
+          </div>
+  </div>
+      </div>
+      <div class="row">
+  <div class="col s12 m12">
+          <p><b>Nombre del usuario amigo</b></p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum doloremque voluptatum aliquid atque totam aperiam numquam blanditiis nam, quaerat adipisci vitae ducimus cumque consequuntur, quidem natus possimus repudiandae corrupti quia.</p>
+          <div class="center">
+      <img src="../assets/images/atardecer.png" alt="" class="responsive-img">
+          </div>
+  </div>
+      </div>
+      <div class="row">
+  <div class="col s12 m12">
+          <p><b>Nombre del usuario amigo</b></p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum doloremque voluptatum aliquid atque totam aperiam numquam blanditiis nam, quaerat adipisci vitae ducimus cumque consequuntur, quidem natus possimus repudiandae corrupti quia.</p>
+          <div class="center">
+      <img src="../assets/images/atardecer.png" alt="" class="responsive-img">
+          </div>
+  </div>
+      </div>
+  </div>
+  </div>
+  <!-- SEGUNDA VISTA - AMIGOS -->
+  <div id="view2" class="col s12">
+      <div class="row">
+        <ul class="tabs">
+            <div class="col s6 m6 center">
+                <li class="tab "><a class="active" href="#friends">Amigos</a></li>
+            </div>
+            <div class="col s6 m6 center">
+                <li class="tab"><a href="#suggestions">Sugerencias</a></li>
+            </div>
+        </ul>
+      </div>
+  <!-- sub-seccion vista amigos -->
+  <div id="friends" class="col s12">
+    <ul class="collection">
+      <li class="collection-item avatar">
+      <img src="../assets/images/foto1.jpg" alt="" class="circle">
+      <span class="title">Title</span>
+      <p>First Line <br>
+      Second Line
+      </p>             
+      </li>
+      <li class="collection-item avatar">
+      <img src="../assets/images/foto1.jpg" alt="" class="circle">
+      <span class="title">Title</span>
+      <p>First Line <br>
+      Second Line
+      </p>
+      </li>
+      <li class="collection-item avatar">
+      <img src="../assets/images/foto1.jpg" alt="" class="circle">
+      <span class="title">Title</span>
+      <p>First Line <br>
+      Second Line
+      </p>
+      </li>
+      <li class="collection-item avatar">
+        <img src="../assets/images/foto1.jpg" alt="" class="circle">
+        <span class="title">Title</span>
+        <p>First Line
+      <br> Second Line
+        </p>
+      </li>
+    </ul>
+  </div>
+  <!-- sub-seccion vista sugerencias de amistad -->
+  <div id="suggestions" class="col s12">
+    <ul class="collection">
+    <li class="collection-item avatar buttons">
+      <img src="../assets/images/foto1.jpg" alt="" class="circle">
+      <span>Isabel Chavez</span>
+      <button class="btn waves-effect waves-light right" type="submit" name="action">Seguir
+    <i class="material-icons"></i>
+      </button>
+    </li>
+    <li class="collection-item avatar buttons">
+      <img src="../assets/images/foto1.jpg" alt="" class="circle">
+      <span>Isabel Chavez</span>
+      <button class="btn waves-effect waves-light right" type="submit" name="action">Seguir
+        <i class="material-icons"></i>
+      </button>
+    </li>
+    <li class="collection-item avatar buttons">
+      <img src="../assets/images/foto1.jpg" alt="" class="circle">
+      <span>Isabel Chavez</span>
+      <button class="btn waves-effect waves-light right" type="submit" name="action">Seguir
+        <i class="material-icons"></i>
+      </button>
+    </li>
+    <li class="collection-item avatar buttons">
+      <img src="../assets/images/foto1.jpg" alt="" class="circle">
+      <span>Isabel Chavez</span>
+      <button class="btn waves-effect waves-light right" type="submit" name="action">Seguir
+        <i class="material-icons"></i>
+      </button>
+    </li>
+    </ul>
+  </div>
+  </div>
+  <!-- tercera vista - perfil -->
+  <div id="view3" class="col s12">Test 3</div> 
+  <!--  Scripts-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../vendors/Materialize/js/materialize.min.js"></script>
+  <script type="text/javascript" src="../js/app.js"></script>
+</body>
+</html>
+
+<!-- <a href="#"><img class="responsive-img circle" src="../assets/images/usuario.png" alt="usuario"></a>
+<p>Paolo Guerrero</p>
+<a class="waves-effect waves-light btn">SEGUIR</a> -->
