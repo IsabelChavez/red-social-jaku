@@ -9,11 +9,14 @@ div[id^='view'] {
 /* estilos de header y menu */
 
 .navbar{
-    background : #28ebcf;
+    background : rgba(0, 0, 0, 0.856);
 }
 
 .navbar div a img{
     padding-top: 0.7rem;
+}
+#log-out i {
+    padding-right: 12px;
 }
 
 /* estilos para la primera vista */

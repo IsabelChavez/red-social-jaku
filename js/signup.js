@@ -53,8 +53,8 @@ $(document).ready(function() {
   }
   watcher();
   function appears() {
-    var content = $('.content');
-    content.html('<p>Bienvenido<p/><button class="waves-effect waves-light btn cyan accent-2" id="logout">Cerrar Sesión</button>');
+    var content = $('#log-out');
+    content.html('<a href="#" id="logout"><i class="large material-icons">power_settings_new</i></a>');
     $('#logout').on('click', function() {
       firebase.auth().signOut()
         .then(function() {
@@ -65,12 +65,21 @@ $(document).ready(function() {
         });
     });
   }
+  function saveUser(user) {
+    var usuario = {
+      uid: user.uid,
+      name: user.displayName,
+      email: user.email,
+      photo: user.photoURL,
+    };
+    firebase.database().ref('Jaku').push(usuario);
+  }
   var provider = new firebase.auth.GoogleAuthProvider();
   $('#btnGoogle').on('click', function() {
     firebase.auth().signInWithPopup(provider)
       .then(function(result) {
         $(location).attr('href', 'view-3.html');
-        $('.content').append('<img src=\'' + result.user.photoURL + '\'/>');
+        saveUser(result.user);
       }).catch(function(error) {
         var errorCode = error.code;
         var errorMessage = error.message;
