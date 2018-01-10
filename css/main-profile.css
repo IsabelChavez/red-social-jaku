@@ -24,7 +24,11 @@ div[id^='view'] {
 .perfil{
     margin-top: 2rem;
 }
-
+.box-post{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 5px;
+}
 .buttons{
     margin-top: 1rem;
     background: #28ebcf;

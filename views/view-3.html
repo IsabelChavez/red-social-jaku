@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -14,13 +13,12 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="../css/main-profile.css">
 </head>
-
 <body>
   <!-- NAVBAR, LOGOS Y VISTAS -->
   <div class="navbar-fixed">
     <nav class="nav-extended navbar">
       <div class="nav-wrapper">
-         <a href="#" class="brand-logo center">
+        <a href="#" class="brand-logo center">
           <img class="responsive-img" width="70" src="../assets/icons/jaku.png" alt="jaku">
         </a>
         <span class="right" id="log-out"></span>
@@ -48,7 +46,7 @@
   </div>
   <!-- PRIMERA VISTA - PUBLICACIONES -->
   <div id="view1" class="col s12 view1 post">
-    <!-- foto de perfil - escribir un estado -->
+  <!-- foto de perfil - escribir un estado -->
     <div class="container">
       <div class="row">
         <div class="col s3 m2">
@@ -59,7 +57,7 @@
         </div>
         <div class="col s9 m10">
           <h5>¿Qué planes para hoy?</h5>
-          <textarea name="textarea" rows="10" cols="50" placeholder='Comentanos aquí'></textarea>
+          <textarea name="textarea"  id="post" rows="10" cols="50" placeholder='Comentanos aquí'></textarea>
           <!-- boton subir fotos y submit -->
           <div class="buttons">
             <div class="file-field input-field camera">
@@ -68,55 +66,16 @@
                   <input type="file">add_a_photo</i>
               </a>
             </div>
-            <button class="btn waves-effect waves-light right" type="submit" name="action">Publicar
+            <button class="btn waves-effect waves-light right" id="publish" type="submit" name="action">Publicar
               <i class="material-icons right"></i>
             </button>
           </div>
         </div>
       </div>
     </div>
-    <!-- lugar donde se publican los post -->
-    <div class="container">
-      <div class="row">
-        <div class="col s12 m12">
-          <p>
-            <b>Nombre del usuario amigo</b>
-          </p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum doloremque voluptatum aliquid atque totam aperiam
-            numquam blanditiis nam, quaerat adipisci vitae ducimus cumque consequuntur, quidem natus possimus repudiandae
-            corrupti quia.</p>
-          <div class="center">
-            <img src="../assets/images/atardecer.png" alt="" class="responsive-img">
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col s12 m12">
-          <p>
-            <b>Nombre del usuario amigo</b>
-          </p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum doloremque voluptatum aliquid atque totam aperiam
-            numquam blanditiis nam, quaerat adipisci vitae ducimus cumque consequuntur, quidem natus possimus repudiandae
-            corrupti quia.</p>
-          <div class="center">
-            <img src="../assets/images/atardecer.png" alt="" class="responsive-img">
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col s12 m12">
-          <p>
-            <b>Nombre del usuario amigo</b>
-          </p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum doloremque voluptatum aliquid atque totam aperiam
-            numquam blanditiis nam, quaerat adipisci vitae ducimus cumque consequuntur, quidem natus possimus repudiandae
-            corrupti quia.</p>
-          <div class="center">
-            <img src="../assets/images/atardecer.png" alt="" class="responsive-img">
-          </div>
-        </div>
-      </div>
-    </div>
+  <!-- lugar donde se publican los post -->
+  <div class="container post-user">
+  </div>
   </div>
   <!-- SEGUNDA VISTA - AMIGOS -->
   <div id="view2" class="col s12">
@@ -134,95 +93,46 @@
         </div>
       </ul>
     </div>
-    <!-- sub-seccion vista amigos -->
+  <!-- sub-seccion vista amigos -->
     <div id="friends" class="col s12">
-      <ul class="collection">
-        <li class="collection-item avatar">
-          <img src="../assets/images/foto1.jpg" alt="" class="circle">
-          <span class="title">Title</span>
-          <p>First Line
-            <br> Second Line
-          </p>
-        </li>
-        <li class="collection-item avatar">
-          <img src="../assets/images/foto1.jpg" alt="" class="circle">
-          <span class="title">Title</span>
-          <p>First Line
-            <br> Second Line
-          </p>
-        </li>
-        <li class="collection-item avatar">
-          <img src="../assets/images/foto1.jpg" alt="" class="circle">
-          <span class="title">Title</span>
-          <p>First Line
-            <br> Second Line
-          </p>
-        </li>
-        <li class="collection-item avatar">
-          <img src="../assets/images/foto1.jpg" alt="" class="circle">
-          <span class="title">Title</span>
-          <p>First Line
-            <br> Second Line
-          </p>
-        </li>
+      <ul class="collection friends">
       </ul>
     </div>
-    <!-- sub-seccion vista sugerencias de amistad -->
+  <!-- sub-seccion vista sugerencias de amistad -->
     <div id="suggestions" class="col s12">
-      <ul class="collection">
-        <li class="collection-item avatar buttons">
-          <img src="../assets/images/foto1.jpg" alt="" class="circle">
-          <span>Isabel Chavez</span>
-          <button class="btn waves-effect waves-light right" type="submit" name="action">Seguir
-            <i class="material-icons"></i>
-          </button>
-        </li>
-        <li class="collection-item avatar buttons">
-          <img src="../assets/images/foto1.jpg" alt="" class="circle">
-          <span>Isabel Chavez</span>
-          <button class="btn waves-effect waves-light right" type="submit" name="action">Seguir
-            <i class="material-icons"></i>
-          </button>
-        </li>
-        <li class="collection-item avatar buttons">
-          <img src="../assets/images/foto1.jpg" alt="" class="circle">
-          <span>Isabel Chavez</span>
-          <button class="btn waves-effect waves-light right" type="submit" name="action">Seguir
-            <i class="material-icons"></i>
-          </button>
-        </li>
-        <li class="collection-item avatar buttons">
-          <img src="../assets/images/foto1.jpg" alt="" class="circle">
-          <span>Isabel Chavez</span>
-          <button class="btn waves-effect waves-light right" type="submit" name="action">Seguir
-            <i class="material-icons"></i>
-          </button>
-        </li>
+      <ul class="collection suggestions">
       </ul>
     </div>
   </div>
   <!-- tercera vista - perfil -->
-  <div id="view3" class="col s12">Test 3</div>
+  <div id="view3" class="center-align">
+    <h3>Metas</h3>
+      <div clas="row">
+        <div class="col s4 offset-s4 offset-s4 l4">
+          <img class="responsive-img circle" src="../assets/images/meta-user.png" alt="usuario">
+        </div>
+      </div>
+    <img src="../assets/images/metas.png" alt="" class="responsive-img">
+  </div> 
   <!--  Scripts-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="../vendors/Materialize/js/materialize.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
   <script>
-    // Initialize Firebase
-    var config = {
+  // Initialize Firebase
+  var config = {
       apiKey: "AIzaSyAsWlB0dmOzld3qIJyJgBztHJNq-ef_1_U",
       authDomain: "red-social-d49cb.firebaseapp.com",
       databaseURL: "https://red-social-d49cb.firebaseio.com",
       projectId: "red-social-d49cb",
       storageBucket: "red-social-d49cb.appspot.com",
       messagingSenderId: "270231005297"
-    };
-    firebase.initializeApp(config);
+  };
+  firebase.initializeApp(config);
   </script>
+  <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+  <script type="text/javascript" src="../js/data.js"></script>
   <script type="text/javascript" src="../js/signup.js"></script>
   <script type="text/javascript" src="../js/main.js"></script>
 </body>
 </html>
-<!-- <a href="#"><img class="responsive-img circle" src="../assets/images/usuario.png" alt="usuario"></a>
-<p>Paolo Guerrero</p>
-<a class="waves-effect waves-light btn">SEGUIR</a> -->

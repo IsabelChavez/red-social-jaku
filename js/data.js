@@ -1,3 +1,4 @@
+// Data para mostrar amigos, sugerencias y noticias
 var data = {
   'profile1': 
       {
@@ -6,7 +7,7 @@ var data = {
         'edad': '26 años',
         'peso': '54 kg',
         'talla': '1.65 cm',
-        'actividades': 'correr, nadar',
+        'actividades': 'Correr, Nadar',
         'foto': '../assets/images/profiles/photo1.jpg'
       }
   ,
@@ -61,7 +62,7 @@ var data = {
         'edad': '23 años',
         'peso': '56 kg',
         'talla': '1.67 cm',
-        'actividades': 'Gimnasio, correr',
+        'actividades': 'Gimnasio, Correr',
         'foto': '../assets/images/profiles/photo6.jpg'
       }
   ,
@@ -83,7 +84,7 @@ var data = {
        'edad': '31 años',
        'peso': '87 Kg',
        'talla': '1.85 cm',
-       'activides': 'Caminar, Futbol',
+       'actividades': 'Caminar, Futbol',
        'foto': '../assets/images/profiles/photo8.jpg'
      }
   ,    
@@ -98,4 +99,74 @@ var data = {
         'foto': '../assets/images/profiles/photo9.jpg'
       }
   ,
+};
+
+var sugerencias = {
+  'marca1': 
+      {
+        'id': 'a',
+        'nombre': 'Nike',
+        'foto': '../assets/images/sugerencias/photo1.jpg'
+      }
+  ,
+  'marca2':
+      {
+        'id': 'b',
+        'nombre': 'Adidas',
+        'foto': '../assets/images/sugerencias/photo2.jpg'
+      }
+  ,
+  'marca3': 
+      {
+        'id': 'c',
+        'nombre': 'Reebok',
+        'foto': '../assets/images/sugerencias/photo3.jpg'
+      }
+  ,
+  'marca4':
+      {
+        'id': 'd',
+        'nombre': 'Las Brisas',
+        'foto': '../assets/images/sugerencias/photo4.jpg'
+      }
+  ,
+  'marca5':
+      {
+        'id': 'e',
+        'nombre': 'Salud Natural',
+        'foto': '../assets/images/sugerencias/photo5.jpg'
+      }
+};
+var post = {
+  'news1':
+  {
+    'id': 'ab',
+    'usuario': 'Horacio',
+    'message': 'Ningún ciudadano tiene derecho a ser un aficionado en el entrenamiento físico. Qué desgracia es para un hombre crecer sin ver la belleza y fuerza de lo que su cuerpo es capaz.',
+    'foto': '../assets/images/post/news1.jpg'
+  }
+  ,
+  'news2':
+  {
+    'id': 'ac',
+    'usuario': 'Linet',
+    'message': 'Cuanto más sudas en el entrenamiento, menos sangras en combate.',
+    'foto': '../assets/images/post/news2.jpg'
+  }
+  ,
+  'news3':
+  {
+    'id': 'ac',
+    'usuario': 'Andrea',
+    'message': 'Las grandes recompensas esperan a los que son capaces de sufrir, arriesgarse, hacer cosas distintas. Es por ello que están destinadas a solo unos pocos.',
+    'foto': '../assets/images/post/news3.jpg'
+  }
+  ,
+  'news4':
+  {
+    'id': 'ac',
+    'usuario': 'Edward',
+    'message': 'Mantener nuestro cuerpo con buena salud es un deber. De lo contrario no seremos capaces de mantener nuestras mentes fuertes y claras.',
+    'foto': '../assets/images/post/news4.jpg'
+  }
 };
