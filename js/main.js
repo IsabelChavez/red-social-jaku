@@ -43,4 +43,6 @@ $(document).ready(function() {
   $.each(post, function(i, item) {
     $('.post-user').append('<div class="row"><div class="col s12 m12"><p><b>' + post[i].usuario + '</b></p><p>' + post[i].message + '</p><div class="center"><img src="' + post[i].foto + '" alt="" class="responsive-img"></div></div></div>');
   });
+
+  
 });
