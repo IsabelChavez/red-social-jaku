@@ -60,6 +60,14 @@ textarea{
 }
 /* estilos de la segunda vista */
 /* sugerencias */
+<<<<<<< HEAD
 .post-user {
     outline: 1px solid red;
 }
+=======
+
+.navperfil {
+    /* top: 8em; */
+    margin-top: 7.5em;
+}
+>>>>>>> 8928f0b3822083b6c1d84d19a6f2e0d454480218
