@@ -60,4 +60,6 @@ textarea{
 }
 /* estilos de la segunda vista */
 /* sugerencias */
-
+.post-user {
+    outline: 1px solid red;
+}
