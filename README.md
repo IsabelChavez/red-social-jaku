@@ -1,18 +1,41 @@
+# Jaku: Social Fit
+
 ![logo](assets/readme/logo.png)
 
-# Jaku: Social Fit
-Jaku es una red social diseña para personas que esten interesadas en realizar deportes. No importa si recién estás empezando en el mundo del deporte, practicas fitness, running, culturismo, ciclismo o cualquier deporte que realices, con Jaku tendrás la perfecta herramienta que te permitirá contactar con personas que tengan los mismo intereses que los tuyos. Puedes compartir tus ejercicios, rutinas, dietas, recetas y motivaciones, asimismo tambien podrás ver el día a día de tus amigos. Nosotros creemos que compartir conocimientos siempre suma.
 
+Jaku es una red social diseña para personas que esten interesadas en realizar deportes. No importa si recién estás empezando en el mundo del deporte, practicas fitness, running, culturismo, ciclismo o cualquier otro deporte, con Jaku tendrás la perfecta herramienta que te permitirá contactar con personas que tengan los mismo intereses que los tuyos. Puedes compartir tus ejercicios, rutinas, dietas, recetas y motivaciones, asimismo tambien podrás ver el día a día de tus amigos. Nosotros creemos que compartir conocimientos siempre suma.
 
-## Solo el 39% de peruanos realiza deporte
+## Sobre el proyecto final
+
+Nuestro cliente nos ha pedido desarrollar una red social que cumpla con los siguientes requisitos:
+
+- Perfiles de usuarios
+- Un newsfeed donde puedes ver las actualizaciones de todos tus contactos
+- Un lugar donde poder escribir posts
+- Un lugar para subir fotos
+- Capacidad para poder tener amigos o para poder seguir a personas/marcas dentro de la red social
+- Ser mobile friendly
+
+### Qué se requiere?
+
+- Trabajar en parejas
+- Tener una planificación
+- La definición del diseño
+- Diseño mobile friendly
+- Desplegar el producto en Github Pages
+- Opcional, si se desarrolla un login o se desea almacenar la información en una base de datos, usar Firebase.
+
+## LA PROBLEMÁTICA: Solo el 39% de peruanos realiza deporte
 
 ![tabla de info](assets/readme/data.jpg)
 
-Al observar la data mostrada en la imagen, nos hicimos la siguiente pregunta: ¿Porqué motivo los peruanos no realizan ejercicio?.
-Luego de haber detectado la problemática, nos dimos cuenta que la mayoria indica que es por falta de tiempo, es por ello que nos vimos en la necesidad de crear una herramienta para tratar de solucionar dicho problema. 
-Le hicimos preguntas a aquellos peruanos que indicaron no hacer ejercicio por falta de tiempo y se logró observar que muchos de ellos podrían hacer ejercicio por un periodo corto de tiempo al día si tuvieran a alguien con quien hacerlo, en ahí que interviene Jaku y actua como una red social de integración para todas aquellas personas que esten interesadas en hacer deporte.
+Al observar la data mostrada en la imagen, nos hicimos la siguiente pregunta: ¿Porqué motivo los peruanos no realizan ejercicio?. Luego de haber detectado la problemática, nos dimos cuenta que la mayoria indica que es por falta de tiempo, es por ello que nos vimos en la necesidad de crear una herramienta para tratar de solucionar dicho problema. Le hicimos preguntas a aquellos peruanos que indicaron no hacer ejercicio por falta de tiempo y se logró observar que muchos de ellos podrían hacer ejercicio por un periodo corto de tiempo al día si tuvieran a alguien con quien hacerlo, en ahí que interviene Jaku y actua como una red social de integración para todas aquellas personas que esten interesadas en hacer deporte.
 
 # Desarrollo de la Red Social
+
+### Nuestra Planificación
+
+![planificacion](assets/readme/planificacion.png)
 
 ### Primer Scketch
 
@@ -43,26 +66,35 @@ En esta vista nos aparacen las opciones para poder registrarnos, asimismo tambie
 
 ### Vista Principal
 
+Esta es la vista principal en la cual se pueden realizar los post y subir las fotos.
 
 ![view 4](assets/readme/4.png)
 
 
 ### Vista Amigos
 
+En esta vista podemos ver a todos los amigos que tenemos agregado, asimismo los podemos eliminar de nuestra lista.
 
 ![view 5](assets/readme/5.png)
 
 
 ### Vista Sugerencias
 
+Esta vista nos ofrece sugerencias de personas o perosanjes publicos para seguir.
 
 ![view 6](assets/readme/6.png)
 
 
 ### Vista Sugerencias
 
+En esta vista podemos apreciar nuestros objetivos.
 
 ![view 7](assets/readme/7.png)
+
+### Integrantes
+
+- Claudia Gariboto
+- Isabel Chávez
 
 
 
