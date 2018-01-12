@@ -1,63 +1,69 @@
 html {
-    font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
-
 div[id^='view'] {
-    padding-top: 4rem;
+  padding-top: 4rem;
 }
-
 /* estilos de header y menu */
-
 .navbar{
-    background : rgba(0, 0, 0, 0.856);
+  background : rgba(0, 0, 0, 0.856);
 }
-
 .navbar div a img{
-    padding-top: 0.7rem;
+  padding-top: 0.7rem;
 }
 #log-out i {
-    padding-right: 12px;
+  padding-right: 12px;
 }
-
 /* estilos para la primera vista */
-
 .perfil{
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 .box-post{
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 5px 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px 5px;
 }
 .buttons{
-    margin-top: 1rem;
-    background: #28ebcf;
+  margin-top: 1rem;
+  background: #28ebcf;
 }
-
 .buttons a i{
-    background: #28ebcf;
+  background: #28ebcf;
 }
 .buttons button{
-    padding: 0;
-    font-size: 0.8rem;
-    background : #28ebcf;   
+  padding: 0;
+  font-size: 0.8rem;
+  background : #28ebcf;   
 }
-
 .post{
-    padding: 0 1.5rem;
+  padding: 0 1.5rem;
 }
-
 textarea{
-    height: 5rem;
+  height: 5rem;
 }
 
 .camera a i{
-    height: 3rem;   
+  height: 3rem;   
 }
-
 .camera a {
-    width: 3rem;
+  width: 3rem;
 }
-/* estilos de la segunda vista */
-/* sugerencias */
-
+.navperfil {
+  margin-top: 7.5em;
+} 
+@media only screen and (max-width: 1800px){
+  .tabs{
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display:flex;
+  }
+.tabs .tab{
+  -webkit-box-flex:1;
+  -webkit-flex-grow:1;
+  -ms-flex-positive:1;
+  flex-grow:1}
+  .tabs .tab a{
+    padding:0 12px
+  }
+}

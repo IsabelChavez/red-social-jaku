@@ -156,7 +156,7 @@ var post = {
   ,
   'news3':
   {
-    'id': 'ac',
+    'id': 'ad',
     'usuario': 'Andrea',
     'message': 'Las grandes recompensas esperan a los que son capaces de sufrir, arriesgarse, hacer cosas distintas. Es por ello que están destinadas a solo unos pocos.',
     'foto': '../assets/images/post/news3.jpg'
@@ -164,7 +164,7 @@ var post = {
   ,
   'news4':
   {
-    'id': 'ac',
+    'id': 'ae',
     'usuario': 'Edward',
     'message': 'Mantener nuestro cuerpo con buena salud es un deber. De lo contrario no seremos capaces de mantener nuestras mentes fuertes y claras.',
     'foto': '../assets/images/post/news4.jpg'

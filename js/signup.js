@@ -50,8 +50,6 @@ $(document).ready(function() {
         var isAnonymous = user.isAnonymous;
         var uid = user.uid;
         var providerData = user.providerData;
-        $('.perfil').attr('src', photoURL);
-        $('#profileName').text(displayName);
         // ...
       } else {
         // User is signed out.

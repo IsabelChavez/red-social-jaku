@@ -8,6 +8,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="icon" href="../assets/icons/favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,700,900" rel="stylesheet">
   <link rel="stylesheet" href="../vendors/materialize/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -31,12 +32,12 @@
             </a>
           </li>
           <li class="tab">
-            <a href="#view2">
-              <i class="material-icons">person_add</i>
+            <a href="#view2" class="active">
+              <i class="material-icons">group</i>
             </a>
           </li>
           <li class="tab">
-            <a href="#view3">
+            <a href="#view3" class="active">
               <i class="material-icons">face</i>
             </a>
           </li>
@@ -50,10 +51,10 @@
     <div class="container">
       <div class="row">
         <div class="col s3 m2">
-          <a href="#">
+          <a href="#view3" data-activates="slide-out" class="button-collapse">
             <img class="responsive-img circle perfil" src="../assets/images/foto1.jpg" alt="usuario">
           </a>
-          <h6 class="center" id="profileName">Oprah</h6>
+          <h6 class="center profileName">Oprah</h6>
         </div>
         <div class="col s9 m10">
           <h5>¿Qué planes para hoy?</h5>
@@ -63,7 +64,7 @@
             <div class="file-field input-field camera">
               <a class="btn btn-floating">
                 <i class="large material-icons">
-                  <input type="file">add_a_photo</i>
+                <input id="publish-photo" type="file">add_a_photo</i>
               </a>
             </div>
             <button class="btn waves-effect waves-light right" id="publish" type="submit" name="action">Publicar
@@ -113,9 +114,26 @@
         </div>
       </div>
     <img src="../assets/images/metas.png" alt="" class="responsive-img">
-  </div> 
+  </div>
+  <ul id="slide-out" class="side-nav" >
+    <li><div class="user-view">
+      <div class="background">
+        <img src="../assets/images/img-fondo.jpg" class="responsive-img">
+      </div>
+      <a href="#!user"><img class="circle perfil" src=""></a>
+      <a href="#!name"><span class="white-text profileName">Joshelyn Ramirez</span></a>
+    </div></li>
+    <li ><a href="#!" class="file-field input-field">Cambiar foto<i class="material-icons"><input type="file" id="upload" accept='image/x-png,image/jpeg,image/gif'>camera_alt</i></a></li>
+    <li><a href="#!">Intereses: Entrenamiento</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Mi perfil</a></li>
+    <li><a class="waves-effect" href="#!">Edad: 28 años</a></li>
+    <li><a class="waves-effect" href="#!">Peso: 60 kg</a></li>
+    <li><a class="waves-effect" href="#!">Talla: 1.65 cm</a></li>
+    <li><a class="waves-effect" href="#!">Entrenas en: Gym Spa Arnold</a></li>
+  </ul>
   <!--  Scripts-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="../vendors/jquery/jquery.min.js"></script>
   <script type="text/javascript" src="../vendors/materialize/js/materialize.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
   <script>

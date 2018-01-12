@@ -1,5 +1,7 @@
 $(document).ready(function() {
-// Trayendo la data de firebase
+  $('.button-collapse').sideNav();
+ 
+  // Trayendo la data de firebase
   var database = firebase.database();
   // Al escuchar el click se postea 
   $('#publish').on('click', function() {
@@ -41,8 +43,50 @@ $(document).ready(function() {
     });
   });
   $.each(post, function(i, item) {
-    $('.post-user').append('<div class="row"><div class="col s12 m12"><p><b>' + post[i].usuario + '</b></p><p>' + post[i].message + '</p><div class="center"><img src="' + post[i].foto + '" alt="" class="responsive-img"></div></div></div>');
+    $('.post-user').append('<div class="row"><div class="col s12 m12"><div class="card"><div class="card-image"><img src="' + post[i].foto + '"><span class="card-title"></span><a class="btn-floating halfway-fab waves-effect grey darken-3" id="' + post[i].id + '"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a></div><div class="card-content"><h5>' + post[i].usuario + '</h5><p>' + post[i].message + '</p></div></div></div></div>');
+    $('#' + post[i].id + '').on('click', function() {
+      $(this).html(function(i, v) {
+        return v === '<i class="fa fa-thumbs-up" aria-hidden="true"></i>' ? '<i class="fa fa-thumbs-down" aria-hidden="true"></i>' : '<i class="fa fa-thumbs-up" aria-hidden="true"></i>';
+      });
+    });
   });
-
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // User is signed in.
+      console.log('existe usuario activo');
+      var displayName = user.displayName;
+      var email = user.email;
+      var emailVerified = user.emailVerified;
+      var photoURL = user.photoURL;
+      console.log(photoURL);
+      var isAnonymous = user.isAnonymous;
+      var uid = user.uid;
+      var providerData = user.providerData;
+      if (photoURL === null) {
+        $('.perfil').attr('src', '../assets/images/user.png');
+      } else {
+        $('.perfil').attr('src', photoURL);
+      }     
+      $('.profileName').text(displayName);
+      // ...
+    } else {
+      // User is signed out.
+    }
+  });
+  // Cambiar foto de perfil
+  var tablaBase = firebase.database().ref('images');
+  $('#upload').change(function() {
+    if (this.files && this.files[0]) {
+      var archivo = new FileReader();
+      archivo.onload = function(e) {
+        tablaBase.push({
+          urlLarge: e.target.result,
+        });
+        // visualizar imagen en la etiqueta img
+        $('.perfil').attr('src', e.target.result);
+      };
+      archivo.readAsDataURL(this.files[0]);
+    };
+  });
   
 });
