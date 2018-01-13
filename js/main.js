@@ -88,5 +88,27 @@ $(document).ready(function() {
       archivo.readAsDataURL(this.files[0]);
     };
   });
-  
+  /*$('#publish-photo').change(function() {
+    tablaBase.on('value', function(snapshot) {
+      snapshot.forEach(function(e) {
+        var objeto = e.val();
+        if (objeto.url != null) {
+          $('.post-user').append('<div class="row"><div class="col s12 m12"><div class="card"><div class="card-image"><img src="' + e.target.result + '"><span class="card-title"></span><a class="btn-floating halfway-fab waves-effect grey darken-3" id=""><i class="fa fa-thumbs-up" aria-hidden="true"></i></a></div><div class="card-content"><h5></h5><p></p></div></div></div></div>');
+        }
+      });
+    });
+  });*/
+   $('#publish-photo').change(function() {
+    if (this.files && this.files[0]) {
+      var archivo = new FileReader();
+      archivo.onload = function(e) {
+        tablaBase.push({
+          urlLarge: e.target.result,
+        });
+        // visualizar imagen en la etiqueta img
+        $('.post-user-photo').append('<div class="row"><div class="col s12 m12"><div class="card"><div class="card-image"><img src="' + e.target.result + '"><span class="card-title"></span><a class="btn-floating halfway-fab waves-effect grey darken-3" id=""><i class="fa fa-thumbs-up" aria-hidden="true"></i></a></div><div class="card-content"><h5></h5><p></p></div></div></div></div>');
+      };
+      archivo.readAsDataURL(this.files[0]);
+    };
+  });
 });

@@ -41,6 +41,7 @@ $(document).ready(function() {
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
         // User is signed in.
+        saveUser(result.user);
         appears();
         console.log('existe usuario activo');
         var displayName = user.displayName;
@@ -65,6 +66,8 @@ $(document).ready(function() {
       firebase.auth().signOut()
         .then(function() {
           $(location).attr('href', 'signup.html');
+          var email2 = $('#email2').val('');
+          var password2 = $('#password2').val('');
         })
         .catch(function(error) {
           console.log(error);
@@ -86,7 +89,6 @@ $(document).ready(function() {
   $('#btnGoogle').on('click', function() {
     firebase.auth().signInWithPopup(provider)
       .then(function(result) {
-        saveUser(result.user);
         $(location).attr('href', 'view-3.html');
       }).catch(function(error) {
         var errorCode = error.code;
