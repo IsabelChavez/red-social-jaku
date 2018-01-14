@@ -36,7 +36,7 @@ $(document).ready(function() {
       // User is signed in.
       var showPost = firebase.database().ref('message');
       showPost.on('child_added', function(data) {
-        $('.post-user').append('<div class="row box-post"><div class="col s12 m12 "><img class="responsive-img circle col s3 l1" src=' + data.val().photo + '><p>' + data.val().message + '<span class="right">' + data.val().time + '');
+        $('.post-user').prepend('<div class="row box-post"><div class="col s12 m12 "><img class="responsive-img circle col s3 l1" src=' + data.val().photo + '><p>' + data.val().message + '<span class="right">' + data.val().time + '');
       });
       console.log('existe usuario activo');
       var displayName = user.displayName;
@@ -53,7 +53,7 @@ $(document).ready(function() {
         var message = $('#post').val();
         console.log(message);
         if ($('#post').val().length > 0) {
-          $('.post-user').prepend('<div class="row box-post"><div class="col s12 m12 "><img class="responsive-img circle col s3 l1" src=' + $('.perfil').attr('src') + '><p>' + $('#post').val() + ' <span class="right">' + time + '');
+          $('.post-user').hide('<div class="row box-post"><div class="col s12 m12 "><img class="responsive-img circle col s3 l1" src=' + $('.perfil').attr('src') + '><p>' + $('#post').val() + ' <span class="right">' + time + '');
           $('#post').val('');
         }
         // Probando como se guarda la data en firebase de los post
