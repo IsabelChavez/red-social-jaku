@@ -53,7 +53,7 @@ $(document).ready(function() {
         var message = $('#post').val();
         console.log(message);
         if ($('#post').val().length > 0) {
-          $('.post-user').hide('<div class="row box-post"><div class="col s12 m12 "><img class="responsive-img circle col s3 l1" src=' + $('.perfil').attr('src') + '><p>' + $('#post').val() + ' <span class="right">' + time + '');
+          //$('.post-user').('<div class="row box-post"><div class="col s12 m12 "><img class="responsive-img circle col s3 l1" src=' + $('.perfil').attr('src') + '><p>' + $('#post').val() + ' <span class="right">' + time + '');*/
           $('#post').val('');
         }
         // Probando como se guarda la data en firebase de los post
