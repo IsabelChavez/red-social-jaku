@@ -1,27 +1,8 @@
 $(document).ready(function() {
   $('.button-collapse').sideNav();
- 
   // Trayendo la data de firebase
   var database = firebase.database();
   // Al escuchar el click se postea 
-  $('#publish').on('click', function() {
-    var time = moment().format('LT');
-    var message = $('#post').val();
-    console.log(message);
-    if ($('#post').val().length > 0) {
-      $('.post-user').prepend('<div class="row box-post"><div class="col s12 m12 "><img class="responsive-img circle col s3 l1" src=' + $('.perfil').attr('src') + '><p>' + $('#post').val() + ' <span class="right">' + time + '');
-      $('#post').val('');
-    }
-    // Probando como se guarda la data en firebase de los post
-    database.ref('post').push({
-      message: message,
-      time: time
-    });
-    database.ref('jaku').push({
-      message: message,
-      time: time
-    });
-  });
   // Recorriendo la data para los amigos
   $.each(data, function(i, item) {
     $('.friends').append('<li class="collection-item avatar buttons"><img src="' + data[i].foto + '" class="circle"><span class="title">' + data[i].nombre + '</span><button class="btn waves-effect waves-light right" id="' + data[i].id + '" type="submit" name="action">Eliminar</button><p>' + data[i].edad + ' <br>' + data[i].actividades + '</p></li>');
@@ -53,21 +34,36 @@ $(document).ready(function() {
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.
+      var showPost = firebase.database().ref('message');
+      showPost.on('child_added', function(data) {
+        $('.post-user').append('<div class="row box-post"><div class="col s12 m12 "><img class="responsive-img circle col s3 l1" src=' + $('.perfil').attr('src') + '><p>' + data.val().message + '<span class="right">' + data.val().time + '');
+      });
       console.log('existe usuario activo');
       var displayName = user.displayName;
-      var email = user.email;
-      var emailVerified = user.emailVerified;
       var photoURL = user.photoURL;
-      console.log(photoURL);
-      var isAnonymous = user.isAnonymous;
       var uid = user.uid;
-      var providerData = user.providerData;
       if (photoURL === null) {
         $('.perfil').attr('src', '../assets/images/user.png');
       } else {
         $('.perfil').attr('src', photoURL);
       }     
       $('.profileName').text(displayName);
+      $('#publish').on('click', function() {
+        var time = moment().format('LT');
+        var message = $('#post').val();
+        console.log(message);
+        if ($('#post').val().length > 0) {
+          $('.post-user').prepend('<div class="row box-post"><div class="col s12 m12 "><img class="responsive-img circle col s3 l1" src=' + $('.perfil').attr('src') + '><p>' + $('#post').val() + ' <span class="right">' + time + '');
+          $('#post').val('');
+        }
+        // Probando como se guarda la data en firebase de los post
+        var message = {
+          photo : photoURL,
+          message: message,
+          time: time
+        };
+        database.ref('message').push(message);
+      });
       // ...
     } else {
       // User is signed out.
@@ -88,7 +84,7 @@ $(document).ready(function() {
       archivo.readAsDataURL(this.files[0]);
     };
   });
-  /*$('#publish-photo').change(function() {
+  /* $('#publish-photo').change(function() {
     tablaBase.on('value', function(snapshot) {
       snapshot.forEach(function(e) {
         var objeto = e.val();
@@ -98,7 +94,7 @@ $(document).ready(function() {
       });
     });
   });*/
-   $('#publish-photo').change(function() {
+  /* publish-photo').change(function() {
     if (this.files && this.files[0]) {
       var archivo = new FileReader();
       archivo.onload = function(e) {
@@ -110,5 +106,5 @@ $(document).ready(function() {
       };
       archivo.readAsDataURL(this.files[0]);
     };
-  });
+  });*/
 });

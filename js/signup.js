@@ -41,16 +41,18 @@ $(document).ready(function() {
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
         // User is signed in.
-        saveUser(result.user);
         appears();
         console.log('existe usuario activo');
-        var displayName = user.displayName;
-        var email = user.email;
-        var emailVerified = user.emailVerified;
-        var photoURL = user.photoURL;
-        var isAnonymous = user.isAnonymous;
-        var uid = user.uid;
-        var providerData = user.providerData;
+        var usuarios = {      
+          displayName: user.displayName,
+          email: user.email,
+          emailVerified: user.emailVerified,
+          photoURL: user.photoURL,
+          isAnonymous: user.isAnonymous,
+          uid: user.uid,
+          providerData: user.providerData,
+        };
+        firebase.database().ref('jaku/' + user.uid).set(usuarios);
         // ...
       } else {
         // User is signed out.
@@ -73,16 +75,6 @@ $(document).ready(function() {
           console.log(error);
         });
     });
-  }
-  // Funcion para guardar los datos del usuario en Firebase
-  function saveUser(user) {
-    var usuario = {
-      uid: user.uid,
-      name: user.displayName,
-      email: user.email,
-      photo: user.photoURL,
-    };
-    firebase.database().ref('jaku').push(usuario);
   }
   // Para ingresar con Google 
   var provider = new firebase.auth.GoogleAuthProvider();
