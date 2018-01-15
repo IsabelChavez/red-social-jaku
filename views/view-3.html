@@ -125,6 +125,7 @@
     </div>
   </div>
   <!-- tercera vista - perfil -->
+  
   <div id="view3" class="center-align">
     <h3>Metas</h3>
       <div clas="row">
@@ -133,7 +134,33 @@
         </div>
       </div>
     <img src="../assets/images/metas.png" alt="" class="responsive-img">
+    <div class="row">
+      <div class="col s12 m6 offset-m2 offset-m3">
+        <form id="formulario" class="imc" name="formulario" action="#">
+          <legend> Cálculo de IMC </legend>
+          <div class="form-group col s12 m12">
+            <label for="altura"> Altura:</label>
+            <input type="text" placeholder="Ejem: 1.65 " id="altura" name="altura" />
+          </div>
+          <div class="form-group col s12 m12">
+            <label for="peso"> Peso:</label>
+            <input placeholder="Ejem: 50 " type="text" id="peso" name="peso" />
+          </div>
+          <div class="form-group col s12  m12">
+            <input class="with-gap" id="sexo" type="radio" name="sexo group1" value="M" />
+            <label class="inline" for="sexo">Masculino</label>
+            <input class="with-gap" id="sexo1" type="radio" name="sexo group1" value="F" />
+            <label class="inline" for="sexo1">Feminino</label>
+          </div>
+          <br>
+          <button class="waves-effect waves-light btn space" id="enviar" type="button" name="Enviar"> Calcular </button>
+          <br>
+          <label class="flow-text black-text" id="resultado" name="resultado" value=""> </label>
+        </form>
+      </div>
+    </div>
   </div>
+  
   <!-- Sitio de Perfil -->
   <ul id="slide-out" class="side-nav" >
     <li><div class="user-view">

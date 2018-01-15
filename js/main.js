@@ -138,4 +138,43 @@ $(document).ready(function() {
       archivo.readAsDataURL(this.files[0]);
     };
   });
+  $('#enviar').on('click', function () {
+    imc()
+  })
+  // funcion para calcular el indice de masa corporal
+  function imc() {
+    var sexo = document.formulario.sexo.value;
+    var sexo1 = document.formulario.sexo1.value;
+    var a = document.formulario.altura.value;
+    var p = document.formulario.peso.value;
+    var calculo = (p / Math.pow(a, 2)).toFixed(2);
+
+    if (sexo === 'M') {
+      if (calculo < 20.7) {
+        document.querySelector("[name='resultado']").textContent = ('Bajo de peso con IMC de: ' + calculo);
+      } else if (calculo >= 20.7 && calculo < 26.4) {
+        document.querySelector("[name='resultado']").textContent = ('Peso normal con IMC de: ' + calculo);
+      } else if (calculo >= 26.4 && calculo < 27.8) {
+        document.querySelector("[name='resultado']").textContent = ('Sobrepeso con IMC de: ' + calculo);
+      } else if (calculo >= 27.8 && calculo < 32.3) {
+        document.querySelector("[name='resultado']").textContent = ('Obesidad con IMC de: ' + calculo);
+      } else if (calculo >= 32.3) {
+        document.querySelector("[name='resultado']").textContent = ('Obesidad grave con IMC de: ' + calculo);
+      }
+    }
+    if (sexo1 === 'F') {
+      if (calculo < 19.1) {
+        document.querySelector("[name='resultado']").textContent = ('Bajo de peso con IMC de: ' + calculo);
+      } else if (calculo >= 19.1 && calculo < 25.8) {
+        //alert("Peso normal com IMC de " + calculo);
+        document.querySelector("[name='resultado']").textContent = ('Peso normal con IMC de:  ' + calculo);
+      } else if (calculo >= 25.8 && calculo < 27.3) {
+        document.querySelector("[name='resultado']").textContent = ('Sobrepeso con IMC de: ' + calculo);
+      } else if (calculo >= 27.3 && calculo < 31.1) {
+        document.querySelector("[name='resultado']").textContent = ('Obesidad con IMC de: ' + calculo);
+      } else if (calculo >= 31.1) {
+        document.querySelector("[name='resultado']").textContent = ('Obesidad grave com IMC de: ' + calculo);
+      }
+    }
+  }
 });
