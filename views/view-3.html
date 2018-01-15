@@ -62,9 +62,8 @@
           <!-- boton subir fotos y submit -->
           <div class="buttons">
             <div class="file-field input-field camera">
-              <a class="btn btn-floating">
-                <i class="large material-icons">
-                <input id="publish-photo" type="file">add_a_photo</i>
+              <a class="btn btn-floating btn modal-trigger" href="#savePhoto">
+                <i class="large material-icons">add_a_photo</i>
               </a>
             </div>
             <button class="btn waves-effect waves-light right" id="publish" type="submit" name="action">Publicar
@@ -72,6 +71,26 @@
             </button>
           </div>
         </div>
+      </div>
+    </div>
+    <!--Modal para subir fotos-->
+    <div id="savePhoto" class="modal">
+      <div class="modal-content">
+        <h4>Subir Fotos</h4>
+        <form action="#">
+          <div class="file-field input-field">
+            <div class="btn teal accent-3">
+              <span>Foto</span>
+              <input type="file" id="uploadPhoto" accept='image/x-png,image/jpeg,image/gif'>
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" id="publishPhoto" class="modal-action modal-close waves-effect waves-green btn teal accent-3">Publicar</a>
       </div>
     </div>
   <!-- lugar donde se publican los post -->

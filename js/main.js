@@ -96,6 +96,28 @@ $(document).ready(function() {
           $('#training').text(data.val().training);
         }
       });
+      // Subir fotos a la base de datos
+      $('#uploadPhoto').change(function() {
+        var time = moment().format('LT');
+        if (this.files && this.files[0]) {
+          var archivo = new FileReader();
+          archivo.onload = function(e) {
+            $('#publishPhoto').on('click', function() {
+              tablaBase.push({
+                photo: photoURL,
+                urlLarge: e.target.result,
+                time: time
+              });    
+            });
+          };
+        };
+        archivo.readAsDataURL(this.files[0]);
+      });
+      // Mostar las imagenes subidas a la base de datos 
+      var showPost = firebase.database().ref('images');
+      showPost.on('child_added', function(data) {
+        $('.post-user').prepend('<div class="row box-post"><div class="col s12 m12 "><img class="responsive-img circle col s3 l1" src=' + data.val().photo + '><img class="responsive-img  col s6 l8" src=' + data.val().urlLarge + '><span class="right">' + data.val().time + '');
+      });
       // ...
     } else {
       // User is signed out.
