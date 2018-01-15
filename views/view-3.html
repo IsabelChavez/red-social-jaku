@@ -115,6 +115,7 @@
       </div>
     <img src="../assets/images/metas.png" alt="" class="responsive-img">
   </div>
+  <!-- Sitio de Perfil -->
   <ul id="slide-out" class="side-nav" >
     <li><div class="user-view">
       <div class="background">
@@ -124,15 +125,54 @@
       <a href="#!name"><span class="white-text profileName"></span></a>
     </div></li>
     <li ><a href="#!" class="file-field input-field">Cambiar foto<i class="material-icons"><input type="file" id="upload" accept='image/x-png,image/jpeg,image/gif'>camera_alt</i></a></li>
-    <li><a href="#!">Intereses:</a><span></span></li>
+    <li><a href="#!">Intereses: <span id="interests"></span></a></li>
     <li><div class="divider"></div></li>
     <li><a class="subheader">Mi perfil</a></li>
-    <li><a class="waves-effect" href="#!">Edad: 28 años</a></li>
-    <li><a class="waves-effect" href="#!">Peso: 60 kg</a></li>
-    <li><a class="waves-effect" href="#!">Talla: 1.65 cm</a></li>
-    <li><a class="waves-effect" href="#!">Entrenas en: Gym Spa Arnold</a></li>
-    <li><a href="" class="btn waves-effect waves-light grey darken-3">Actualizar datos</a></li>
+    <li><a class="waves-effect" href="#!">Edad: <span id="age"></span></a></li>
+    <li><a class="waves-effect" href="#!">Peso: <span id="weight"></span></a></li>
+    <li><a class="waves-effect" href="#!">Talla: <span id="height"></span></a></li>
+    <li><a class="waves-effect" href="#!">Entrenas en: <span id="training"></span></a></li>
+    <li><a class="btn waves-effect waves-light grey darken-3 btn modal-trigger" href="#actualizar">Actualizar datos</a></li>
   </ul>
+  <!--Modal para actualizar datos-->
+  <div id="actualizar" class="modal">
+    <div class="modal-content">
+      <h4>Actualizar datos</h4>
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Caminar, Correr, Nadar, etc." id="mdinterests" type="text" class="validate">
+          <label for="">Intereses</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="25 años" id="mdage" type="text" class="validate">
+          <label for="">Edad</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="60 kg" id="mdweight" type="text" class="validate">
+          <label for="">Peso</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="1.65 cm" id="mdheight" type="text" class="validate">
+          <label for="">Talla</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Gym Bodytech, Malecon de Miraflores, etc." id="mdtraining" type="text" class="validate">
+          <label for="">Entrenas en :</label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" id="save-profile" class="modal-action modal-close  waves-effect waves-light grey darken-3 btn">Grabar</a>
+      </div>
+    </div>
+  </div>
   <!--  Scripts-->
   <script src="../vendors/jquery/jquery.min.js"></script>
   <script type="text/javascript" src="../vendors/materialize/js/materialize.min.js"></script>

@@ -1,8 +1,8 @@
 $(document).ready(function() {
+  // Para el modal de perfil de usuario
   $('.button-collapse').sideNav();
   // Trayendo la data de firebase
   var database = firebase.database();
-  // Al escuchar el click se postea 
   // Recorriendo la data para los amigos
   $.each(data, function(i, item) {
     $('.friends').append('<li class="collection-item avatar buttons"><img src="' + data[i].foto + '" class="circle"><span class="title">' + data[i].nombre + '</span><button class="btn waves-effect waves-light right" id="' + data[i].id + '" type="submit" name="action">Eliminar</button><p>' + data[i].edad + ' <br>' + data[i].actividades + '</p></li>');
@@ -23,6 +23,7 @@ $(document).ready(function() {
       });
     });
   });
+  // Recorre la data creada para mostrar en la presentación
   $.each(post, function(i, item) {
     $('.post-user').append('<div class="row"><div class="col s12 m12"><div class="card"><div class="card-image"><img src="' + post[i].foto + '"><span class="card-title"></span><a class="btn-floating halfway-fab waves-effect grey darken-3" id="' + post[i].id + '"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a></div><div class="card-content"><h5>' + post[i].usuario + '</h5><p>' + post[i].message + '</p></div></div></div></div>');
     $('#' + post[i].id + '').on('click', function() {
@@ -33,7 +34,7 @@ $(document).ready(function() {
   });
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-      // User is signed in.
+      // Mostrando la data de firebase para el newsfeed en tiempo real 
       var showPost = firebase.database().ref('message');
       showPost.on('child_added', function(data) {
         $('.post-user').prepend('<div class="row box-post"><div class="col s12 m12 "><img class="responsive-img circle col s3 l1" src=' + data.val().photo + '><p>' + data.val().message + '<span class="right">' + data.val().time + '');
@@ -48,21 +49,52 @@ $(document).ready(function() {
         $('.perfil').attr('src', photoURL);
       }     
       $('.profileName').text(displayName);
+      // Al escuchar el click se postea 
       $('#publish').on('click', function() {
         var time = moment().format('LT');
         var message = $('#post').val();
-        console.log(message);
         if ($('#post').val().length > 0) {
-          //$('.post-user').('<div class="row box-post"><div class="col s12 m12 "><img class="responsive-img circle col s3 l1" src=' + $('.perfil').attr('src') + '><p>' + $('#post').val() + ' <span class="right">' + time + '');*/
+          var message = {
+            photo: photoURL,
+            message: message,
+            time: time
+          };
+          database.ref('message').push(message);
           $('#post').val('');
         }
-        // Probando como se guarda la data en firebase de los post
-        var message = {
-          photo : photoURL,
-          message: message,
-          time: time
+      });
+      // Guardar informacion de usuario en la data al actualizar
+      $('#save-profile').on('click', function() {
+        var interests = $('#mdinterests').val();
+        var age = $('#mdage').val();
+        var weight = $('#mdweight').val();
+        var height = $('#mdheight').val();
+        var training = $('#mdtraining').val();
+        var personalData = {
+          user: uid,
+          interests: interests,
+          age: age,
+          weight: weight,
+          height: height,
+          training: training,
         };
-        database.ref('message').push(message);
+        database.ref('personalData/' + user.uid).set(personalData);
+        $('#interests').text(interests);
+        $('#age').text(age);
+        $('#weight').text(weight);
+        $('#height').text(height);
+        $('#training').text(training);
+      });
+      // Mostrar la data guardada de actualizacion de datos
+      var showPersonalData = firebase.database().ref('personalData');
+      showPersonalData.on('child_added', function(data) {
+        if (user.uid === data.val().user) {
+          $('#interests').text(data.val().interests);
+          $('#age').text(data.val().age);
+          $('#weight').text(data.val().weight);
+          $('#height').text(data.val(). height);
+          $('#training').text(data.val().training);
+        }
       });
       // ...
     } else {
@@ -84,27 +116,4 @@ $(document).ready(function() {
       archivo.readAsDataURL(this.files[0]);
     };
   });
-  /* $('#publish-photo').change(function() {
-    tablaBase.on('value', function(snapshot) {
-      snapshot.forEach(function(e) {
-        var objeto = e.val();
-        if (objeto.url != null) {
-          $('.post-user').append('<div class="row"><div class="col s12 m12"><div class="card"><div class="card-image"><img src="' + e.target.result + '"><span class="card-title"></span><a class="btn-floating halfway-fab waves-effect grey darken-3" id=""><i class="fa fa-thumbs-up" aria-hidden="true"></i></a></div><div class="card-content"><h5></h5><p></p></div></div></div></div>');
-        }
-      });
-    });
-  });*/
-  /* publish-photo').change(function() {
-    if (this.files && this.files[0]) {
-      var archivo = new FileReader();
-      archivo.onload = function(e) {
-        tablaBase.push({
-          urlLarge: e.target.result,
-        });
-        // visualizar imagen en la etiqueta img
-        $('.post-user-photo').append('<div class="row"><div class="col s12 m12"><div class="card"><div class="card-image"><img src="' + e.target.result + '"><span class="card-title"></span><a class="btn-floating halfway-fab waves-effect grey darken-3" id=""><i class="fa fa-thumbs-up" aria-hidden="true"></i></a></div><div class="card-content"><h5></h5><p></p></div></div></div></div>');
-      };
-      archivo.readAsDataURL(this.files[0]);
-    };
-  });*/
 });
