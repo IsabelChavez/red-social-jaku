@@ -1,9 +1,12 @@
 # Jaku: Social Fit
 
-![logo](assets/readme/logo.png)
-
-
 Jaku es una red social diseña para personas que esten interesadas en realizar deportes. No importa si recién estás empezando en el mundo del deporte, practicas fitness, running, culturismo, ciclismo o cualquier otro deporte, con Jaku tendrás la perfecta herramienta que te permitirá contactar con personas que tengan los mismo intereses que los tuyos. Puedes compartir tus ejercicios, rutinas, dietas, recetas y motivaciones, asimismo tambien podrás ver el día a día de tus amigos. Nosotros creemos que compartir conocimientos siempre suma.
+
+![image](https://user-images.githubusercontent.com/32299835/37752005-af718e6c-2d63-11e8-87d2-8eaa4d52d0ed.png)
+
+## Desarrollado para
+ [Laboratoria](http://laboratoria.la)
+
 
 ## Sobre el proyecto final
 
